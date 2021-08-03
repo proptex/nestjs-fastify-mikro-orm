@@ -1,0 +1,46 @@
+{
+  "name": "nestjs-fastify-mikro-orm",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build --webpack",
+    "start": "npm run build && npm run start:prod",
+    "start:prod": "node dist/main"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts"
+    ]
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "^4.5.6",
+    "@mikro-orm/core": "^4.5.6",
+    "@mikro-orm/nestjs": "4.2.0",
+    "@mikro-orm/postgresql": "^4.5.6",
+    "@mikro-orm/sql-highlighter": "^1.0.1",
+    "@nestjs/cli": "^7.0.0",
+    "@nestjs/common": "^7.6.18",
+    "@nestjs/config": "^0.6.1",
+    "@nestjs/core": "^7.0.0",
+    "@nestjs/platform-express": "^7.0.0",
+    "@nestjs/platform-fastify": "^7.4.4",
+    "@types/uuid": "^8.3.1",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "ts-node": "9.0.0",
+    "typescript": "^3.7.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "ts-loader": "^6.2.1",
+    "tsconfig-paths": "^3.9.0",
+    "webpack": "^4.44.1"
+  }
+}
