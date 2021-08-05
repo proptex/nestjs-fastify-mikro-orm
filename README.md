@@ -1,3 +1,5 @@
+--**Warning**-- ***This combination of frameworks doesn't work correctly due to https://github.com/mikro-orm/nestjs/issues/31 issue. The unit of work is shared between requests.***
+
 Start a postgres database:
 
 `docker run --name nestjs-fastify-mikro-orm-postgres -e POSTGRES_USER=nestjs-fastify-mikro-orm -e POSTGRES_PASSWORD=password -p 127.0.0.1:5432:5432 postgres:9.6.16`
